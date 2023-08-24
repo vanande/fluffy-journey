@@ -12,6 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import {RouterModule, RouterOutlet} from "@angular/router";
 import { FooterComponent } from './footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
+import {CarouselModule} from "ngx-bootstrap/carousel";
 
 @NgModule({
   declarations: [
@@ -20,20 +21,21 @@ import { LandingComponent } from './landing/landing.component';
     FooterComponent,
     LandingComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatListModule,
-        RouterOutlet,
-        RouterModule.forRoot([
-          {path:'home', component: LandingComponent},
-          {path:'', redirectTo:'/home', pathMatch:'full'},
-        ])
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    RouterOutlet,
+    RouterModule.forRoot([
+      {path: 'home', component: LandingComponent},
+      {path: '', redirectTo: '/home', pathMatch: 'full'},
+    ]),
+    CarouselModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

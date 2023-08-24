@@ -1,0 +1,14 @@
+<div class="presentation">
+
+</div>
+
+<h1>Nos dernières rénovations</h1>
+<carousel [isAnimated]="true">
+  <slide class="col-sm-6" *ngFor="let slide of slides">
+    <img [src]="slide.imageSrc" [alt]="slide.alt">
+    <div class="carousel-caption d-none d-md-block">
+      <h3>{{ slide.label }}</h3>
+      <p>{{ slide.caption }}</p>
+    </div>
+  </slide>
+</carousel>
