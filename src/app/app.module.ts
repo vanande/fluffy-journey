@@ -30,7 +30,8 @@ import { LandingComponent } from './landing/landing.component';
         MatListModule,
         RouterOutlet,
         RouterModule.forRoot([
-          {path:'#', component: NavComponent}
+          {path:'home', component: LandingComponent},
+          {path:'', redirectTo:'/home', pathMatch:'full'},
         ])
     ],
   providers: [],

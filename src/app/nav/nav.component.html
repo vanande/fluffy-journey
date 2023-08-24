@@ -4,9 +4,9 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#">Home</a>
+      <a mat-list-item href="#">Services</a>
+      <a mat-list-item href="#">About</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,11 +23,11 @@
         <img src="assets/images/logo.png" class="logo">
       </a>
       <nav class="nav-link">
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">About</a>
+        <a [ngClass]="{'active': router.url === '/home'}" routerLink="/home">Home</a>
+        <a [ngClass]="{'active': router.url === '/services'}" routerLink="/services">Services</a>
+        <a [ngClass]="{'active': router.url === '/about'}" routerLink="/about">About</a>
       </nav>
     </mat-toolbar>
-    <h1>Content</h1>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

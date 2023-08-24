@@ -16,13 +16,15 @@
 .nav-link a {
   font-weight: bold;
   font-size: 1.1em;
-  padding-left: 1.5rem;
+  margin-left: 1.5rem;
+  padding: 6px 20px;
   text-decoration: none;
   color: white;
+  border-radius: 20px;
 }
 
-.nav-link a:hover {
-  opacity: 70%;
+.nav-link a:hover, .active {
+  opacity: 50%;
 }
 
 .sidenav {
