@@ -1,16 +1,165 @@
-.presentation {
+.landing {
   top: 0;
   left: 0;
-  min-height: 100vh;
-  width: 100%;
-  background: red;
+  height: 100vh;
+  background-size: cover;
+  background: url('../../assets/images/bbg.png') no-repeat center;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.presentation {
+  max-width: 600px;
+  overflow: initial;
+  color: white;
+
+}
+
+.presentation h1, h3, p {
+  pointer-events: none;
+}
+
+.presentation h1 {
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.presentation h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(253, 219, 204);
+}
+
+.presentation p {
+  font-size: 22px;
+  font-weight: lighter;
+  margin: 20px 0 40px;
+}
+
+.presentation .cta {
+  width: 345px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: rgb(86, 73, 68);
+  border: 2px solid rgb(86, 73, 68);
+  border-radius: 15px;
+  font-size: 19px;
+  color: rgb(253, 219, 204);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
   overflow: hidden;
+  transition: .5s;
 }
 
-slide {
-  margin: auto;
+.cta a:hover {
+  color: rgb(86, 73, 68);
 }
 
+.cta a:nth-child(2) {
+  background: transparent;
+  color: rgb(86, 73, 68);
+}
+
+.cta a:nth-child(2):hover {
+  color: rgb(253, 219, 204);
+}
+
+.cta a:nth-child(2)::before {
+  background: rgb(86, 73, 68);
+}
+
+.cta a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(185, 152, 115);
+  z-index: -1;
+  transition: .5s;
+}
+
+.cta a:hover::before {
+  width: 100%;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icons a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid rgb(253, 219, 204);
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgb(253, 219, 204);
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.social-icons a:hover {
+  color: rgb(86, 73, 68);
+}
+
+.social-icons a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(253, 219, 204);
+  z-index: -1;
+  transition: .5s;
+}
+
+.social-icons a:hover::before {
+  width: 100%;
+}
+
+/*
+.home-imgHover {
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+  width: 45%;
+  height: 60%;
+  background: transparent;
+  border: 2px solid red;
+  transition: 3s;
+}
+
+.home-imgHover:hover {
+  background: red;
+}
+*/
 slide img {
   max-height: 75vh;
   width: 100%;
