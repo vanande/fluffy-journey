@@ -14,3 +14,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .example::-webkit-scrollbar {
   display: none;
 }
+
+accordion-group.panel {
+  background-color: red;
+}

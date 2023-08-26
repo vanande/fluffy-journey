@@ -17,7 +17,11 @@
 }
 
 .presentation h1, h3, p {
-  pointer-events: none;
+  cursor: default;
+}
+
+.presentation h1:hover, h3:hover, p:hover {
+  opacity: 30%;
 }
 
 .presentation h1 {
@@ -173,6 +177,14 @@
   z-index: 3;
 }
 
+.showcase {
+  height: 100vh;
+  background-color: rgb(185, 152, 115);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .social-icons a {
   position: relative;
   display: inline-flex;
@@ -260,4 +272,43 @@ slide p {
   100% {
     width: 0;
   }
+}
+
+.faq {
+  background: rgb(185, 152, 115);
+}
+
+mat-expansion-panel {
+  min-height: 3rem;
+  background-color: rgb(185, 152, 115);
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+  display: block;
+}
+
+.faq h1 {
+  color: rgb(86, 73, 68);
+  font-size: clamp(12px, 8vh, 32px);
+  font-weight: 600;
+  position: relative;
+  left: 2rem;
+}
+
+span.question {
+  height: 100%;
+}
+
+.question {
+  font-size: clamp(16px, 4vh, 26px);
+  font-weight: 500;
+  color: rgb(86, 73, 68);
+  height: auto;
+}
+
+
+.answer {
+  font-size: clamp(12px, 2vh, 22px);
+  font-weight: lighter;
+  color: rgb(86, 73, 68);
 }

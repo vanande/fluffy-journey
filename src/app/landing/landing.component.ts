@@ -10,6 +10,8 @@ import {CarouselConfig} from "ngx-bootstrap/carousel";
   ]
 })
 export class LandingComponent {
+  question = 'question';
+
   slides = [
     {
       imageSrc: '../../assets/images/home/Image_AI__5.jpg',
