@@ -297,11 +297,12 @@ slide p {
   font-weight: lighter;
   height: 4rem;
   line-height: 4rem;
+  padding-left: 1rem;
   overflow: hidden;
 }
 
 
-.second-text li {
+.second-text .second-part {
   position: relative;
   top: 0;
   font-size: 3rem;
@@ -318,11 +319,11 @@ slide p {
 }
 
 
-.second-text li span {
+.second-text .second-part span {
   position: relative;
 }
 
-.second-text li span::before {
+.second-text .second-part span::before {
   content: '';
   position: absolute;
   left: 0;
