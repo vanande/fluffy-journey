@@ -342,6 +342,26 @@ slide p {
 }
 /* ------------ */
 
+/* Gallery */
+
+.gallery {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.services {
+  background: red;
+}
+
+.renovation {
+  background: blue;
+}
+
+/* ------------ */
+
+
 mat-expansion-panel {
   min-height: 3rem;
   background-color: rgb(185, 152, 115);
