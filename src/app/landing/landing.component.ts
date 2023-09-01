@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {CarouselConfig} from "ngx-bootstrap/carousel";
 
 @Component({
@@ -10,7 +10,18 @@ import {CarouselConfig} from "ngx-bootstrap/carousel";
   ]
 })
 export class LandingComponent {
-  question = 'question';
+  sliderValue: number = 50; // Initialize with the default value
+
+  updateClipPath() {
+    const sliderImgAfter = document.getElementById('slider-img-after');
+
+    if (sliderImgAfter) {
+      const percentageValue = this.sliderValue + '%';
+      sliderImgAfter.style.clipPath = `polygon(0 0, ${percentageValue} 0, ${percentageValue} 100%, 0 100%)`;
+    }
+
+    console.log(this.sliderValue);
+  }
 
   slides = [
     {

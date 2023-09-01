@@ -344,20 +344,49 @@ slide p {
 
 /* Gallery */
 
-.gallery {
+.renovation-example {
+  display: grid;
   min-height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  place-items: center;
 }
 
-.services {
-  background: red;
+.slider {
+  position: relative;
+  border: 12px solid black;
+  height: 960px;
+  width: 720px;
+  overflow: hidden;
 }
 
-.renovation {
-  background: blue;
+.slider-img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
+
+#slider-img-after {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+#slider-index {
+  position: relative;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+}
+
+#slider-index::-webkit-slider-thumb, #slider-index::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: url("../../assets/swap_horiz.png") no-repeat;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-size: contain;
+  cursor: pointer;
+}
+
 
 /* ------------ */
 

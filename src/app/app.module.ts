@@ -15,6 +15,8 @@ import { LandingComponent } from './landing/landing.component';
 import {CarouselModule} from "ngx-bootstrap/carousel";
 import {AccordionModule} from "ngx-bootstrap/accordion";
 import {MatExpansionModule} from "@angular/material/expansion";
+import {NgOptimizedImage} from "@angular/common";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,23 +25,25 @@ import {MatExpansionModule} from "@angular/material/expansion";
     FooterComponent,
     LandingComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatListModule,
-        RouterOutlet,
-        RouterModule.forRoot([
-            {path: 'home', component: LandingComponent},
-            {path: '', redirectTo: '/home', pathMatch: 'full'},
-        ]),
-        CarouselModule,
-        AccordionModule,
-        MatExpansionModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    RouterOutlet,
+    RouterModule.forRoot([
+      {path: 'home', component: LandingComponent},
+      {path: '', redirectTo: '/home', pathMatch: 'full'},
+    ]),
+    CarouselModule,
+    AccordionModule,
+    MatExpansionModule,
+    NgOptimizedImage,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

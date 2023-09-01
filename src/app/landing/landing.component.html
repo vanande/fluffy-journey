@@ -34,10 +34,18 @@
 
 
 </div>
-<div class="gallery">
-  <div class="services">Services</div>
-  <div class="renovation">image</div>
+
+
+<div class="renovation-example">
+  <div class="slider">
+    <div class="slider-img"><img ngSrc="assets/images/shower/showerBefore.jpg" alt="shower before renovation" height="960" width="720"></div>
+    <div class="slider-img"><img id="slider-img-after" ngSrc="assets/images/shower/showerAfter.jpg" alt="shower after renovation" height="960" width="720"></div>
+    <input type="range" min="0" max="100" [(ngModel)]="sliderValue" (input)="updateClipPath()" id="slider-index">
+
+  </div>
 </div>
+
+
 <!-- Social proof -->
 <!-- FAQ -->
 
