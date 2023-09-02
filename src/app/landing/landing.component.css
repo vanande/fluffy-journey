@@ -352,7 +352,8 @@ slide p {
 
 .slider {
   position: relative;
-  border: 12px solid black;
+  border: 12px solid rgb(86, 73, 68);
+  border-radius: 5%;
   height: 960px;
   width: 720px;
   overflow: hidden;
@@ -365,7 +366,7 @@ slide p {
 }
 
 #slider-img-after {
-  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 #slider-index {
@@ -425,3 +426,108 @@ span.question {
   font-weight: lighter;
   color: rgb(86, 73, 68);
 }
+
+/* Social proof - comment section */
+
+.social-proof {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(185, 152, 115);
+  padding-top: 12rem;
+}
+
+.comments {
+  position: relative;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.comments .comment {
+  position: relative;
+  max-width: 300px;
+  height: 205px;
+  background-color: whitesmoke;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+  transition: .5s ease-in-out;
+  border-radius: 30px;
+}
+
+.comments .comment:hover {
+  height: 420px;
+}
+
+.comment .comments .comment-img {
+  position: relative;
+  height: 260px;
+  width: 260px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.comment .comments .comment-img img{
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+}
+
+
+.comment {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.comments .comment .comment-content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: rgb(143, 74, 0);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+.comments .comment:hover .comment-content {
+  visibility: visible;
+  margin-top: -40px;
+  opacity: 1;
+  transition-delay: .3s;
+}
+
+.comment a {
+  text-decoration: none;
+}
+
+.comment h1 {
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.comment p {
+  font-weight: lighter;
+}
+
+.comment img {
+  top: 0;
+  border-radius: 25%;
+}
+
+/* ------------ */

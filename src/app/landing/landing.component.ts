@@ -10,7 +10,7 @@ import {CarouselConfig} from "ngx-bootstrap/carousel";
   ]
 })
 export class LandingComponent {
-  sliderValue: number = 50; // Initialize with the default value
+  sliderValue: number = 100; // Initialize with the default value
 
   updateClipPath() {
     const sliderImgAfter = document.getElementById('slider-img-after');
