@@ -8,6 +8,7 @@
       <a mat-list-item href="#">Services</a>
       <a mat-list-item href="#">About</a>
     </mat-nav-list>
+
   </mat-sidenav>
   <mat-sidenav-content style="background-color: rgb(185, 152, 115)">
     <mat-toolbar color="transparent" class="sticky-top">
@@ -27,7 +28,29 @@
         <a [ngClass]="{'active': router.url === '/services'}" routerLink="/services">Services</a>
         <a [ngClass]="{'active': router.url === '/about'}" routerLink="/about">About</a>
       </nav>
+      <button mat-button [matMenuTriggerFor]="animals"><span class="material-symbols-outlined">
+build
+</span></button>
+      <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="Language">Language</button>
+        <button mat-menu-item [matMenuTriggerFor]="Theme">Theme</button>
+      </mat-menu>
+
+      <mat-menu #Language="matMenu">
+        <button mat-menu-item>English</button>
+        <button mat-menu-item>Français</button>
+        <button mat-menu-item>Armenian</button>
+      </mat-menu>
+
+      <mat-menu #Theme="matMenu">
+        <button mat-menu-item>Brown</button>
+        <button mat-menu-item>Blue</button>
+        <button mat-menu-item>Red</button>
+        <button mat-menu-item>Green</button>
+      </mat-menu>
+
     </mat-toolbar>
+
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   </mat-sidenav-content>
