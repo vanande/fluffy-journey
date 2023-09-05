@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import {Router} from "@angular/router";
+import {ThemeService} from "../theme.service";
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +11,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-  constructor(public router: Router) {}
+  constructor(public router: Router, private themeService : ThemeService) {}
   private breakpointObserver = inject(BreakpointObserver);
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -19,4 +20,7 @@ export class NavComponent {
       shareReplay()
     );
 
+  changeTheme(theme: string): void {
+    this.themeService.setTheme(theme);
+  }
 }

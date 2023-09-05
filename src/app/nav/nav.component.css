@@ -30,13 +30,13 @@
   margin-left: 1.5rem;
   padding: 6px 20px;
   text-decoration: none;
-  color: rgb(177, 153, 143);
+  color: var(--primary-color);
   border-radius: 20px;
   position: relative;
 }
 
 .nav-link a:hover{
-  color: rgb(253, 219, 204);
+  color: var(--accent-color);
 }
 
 

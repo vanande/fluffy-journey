@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {CarouselConfig} from "ngx-bootstrap/carousel";
+import { ThemeService } from "../theme.service";
 
 @Component({
   selector: 'app-landing',
@@ -10,7 +11,13 @@ import {CarouselConfig} from "ngx-bootstrap/carousel";
   ]
 })
 export class LandingComponent {
-  sliderValue: number = 100; // Initialize with the default value
+  constructor( private themeService : ThemeService) {}
+
+  changeTheme(theme: string): void {
+    this.themeService.setTheme(theme);
+  }
+
+  sliderValue: number = 100;
 
   updateClipPath() {
     const sliderImgAfter = document.getElementById('slider-img-after');

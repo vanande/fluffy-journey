@@ -16,7 +16,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 :root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-  --accent-color: #28a745;
+  --primary-color: rgb(185, 152, 115);
+  --secondary-color: rgb(86, 73, 68);
+  --accent-color: rgb(143, 74, 0);
+  --light-color: rgb(253, 219, 204);
+  --landing-background : url('assets/images/background/brown_background.png');
 }

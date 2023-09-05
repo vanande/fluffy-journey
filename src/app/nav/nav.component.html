@@ -43,11 +43,12 @@ build
       </mat-menu>
 
       <mat-menu #Theme="matMenu">
-        <button mat-menu-item>Brown</button>
-        <button mat-menu-item>Blue</button>
-        <button mat-menu-item>Red</button>
-        <button mat-menu-item>Green</button>
+        <button mat-menu-item (click)="changeTheme('default')">Brown</button>
+        <button mat-menu-item (click)="changeTheme('blue')">Blue</button>
+        <button mat-menu-item (click)="changeTheme('red')">Red</button>
+        <button mat-menu-item (click)="changeTheme('green')">Green</button>
       </mat-menu>
+
 
     </mat-toolbar>
 
