@@ -4,6 +4,13 @@
   "newProjectRoot": "projects",
   "projects": {
     "married-mouse": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr-FR": "src/locale/messages.fr.xlf",
+          "hy-AM": "src/locale/messages.hy.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": ["hy-AM"],
             "outputPath": "dist/married-mouse",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -42,8 +50,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "5kb",
+                  "maximumError": "10kb"
                 }
               ],
               "outputHashing": "all"
