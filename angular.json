@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["hy-AM"],
+            "localize": ["en-US"],
             "outputPath": "dist/married-mouse",
             "index": "src/index.html",
             "main": "src/main.ts",

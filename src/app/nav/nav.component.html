@@ -37,9 +37,9 @@ build
       </mat-menu>
 
       <mat-menu #Language="matMenu">
-        <button mat-menu-item>English</button>
-        <button mat-menu-item>Français</button>
-        <button mat-menu-item>Armenian</button>
+        <button mat-menu-item (click)="setLang('en')">English</button>
+        <button mat-menu-item (click)="setLang('fr')">Français</button>
+        <button mat-menu-item (click)="setLang('arm')">Armenian</button>
       </mat-menu>
 
       <mat-menu #Theme="matMenu">

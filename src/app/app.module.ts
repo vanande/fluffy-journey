@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -18,35 +18,55 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {NgOptimizedImage} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {MatMenuModule} from "@angular/material/menu";
+import { TranslatePipe } from './translate.pipe';
+import {TranslateService} from "./translate.service";
+import { HttpClientModule} from "@angular/common/http";
+
+export function setupTranslateServiceFactory(
+  service: TranslateService): Function {
+  return () => service.use('en');
+}
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     FooterComponent,
-    LandingComponent
+    LandingComponent,
+    TranslatePipe
   ],
     imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatListModule,
-        RouterOutlet,
-        RouterModule.forRoot([
-            {path: 'home', component: LandingComponent},
-            {path: '', redirectTo: '/home', pathMatch: 'full'},
-        ]),
-        CarouselModule,
-        AccordionModule,
-        MatExpansionModule,
-        NgOptimizedImage,
-        FormsModule,
-        MatMenuModule
+      BrowserModule,
+      BrowserAnimationsModule,
+      MatToolbarModule,
+      MatButtonModule,
+      MatSidenavModule,
+      MatIconModule,
+      MatListModule,
+      RouterOutlet,
+      RouterModule.forRoot([
+          {path: 'home', component: LandingComponent},
+          {path: '', redirectTo: '/home', pathMatch: 'full'},
+      ]),
+      CarouselModule,
+      AccordionModule,
+      MatExpansionModule,
+      NgOptimizedImage,
+      FormsModule,
+      MatMenuModule,
+      HttpClientModule
     ],
-  providers: [],
+  providers: [
+    TranslateService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: setupTranslateServiceFactory,
+      deps: [
+        TranslateService
+      ],
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

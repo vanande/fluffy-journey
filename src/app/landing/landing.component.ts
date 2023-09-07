@@ -49,4 +49,32 @@ export class LandingComponent {
     },
 
   ];
+
+  presentationH1= 'PresentationH1';
+  presentationH3= 'PresentationH3';
+  presentationP= 'PresentationP';
+  presentationCTA1= 'PresentationCTA1';
+  presentationCTA2= 'PresentationCTA2';
+
+  ShowcaseFirstText = 'ShowcaseFirstText';
+  ShowcaseSecondText1 = 'ShowcaseSecondText1';
+  ShowcaseSecondText2 = 'ShowcaseSecondText2';
+  ShowcaseSecondText3 = 'ShowcaseSecondText3';
+  ShowcaseSecondText4 = 'ShowcaseSecondText4';
+
+  Comment1 = "Comment1";
+  Comment2 = "Comment2";
+  Comment3 = "Comment3";
+
+  FaqH1 = "FaqH1";
+  FaqQuestion1 = "FaqQuestion1";
+  FaqAnswer1 = "FaqAnswer1";
+  FaqQuestion2 = "FaqQuestion2";
+  FaqAnswer2 = "FaqAnswer2";
+  FaqQuestion3 = "FaqQuestion3";
+  FaqAnswer3 = "FaqAnswer3";
+  FaqQuestion4 = "FaqQuestion4";
+  FaqAnswer4  = "FaqAnswer4";
+  LastWork = "LastWork"
+
 }

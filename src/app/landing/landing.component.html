@@ -1,11 +1,11 @@
 <div class="landing">
   <section class="presentation">
-    <h1 i18n>We are ArmBati</h1>
-    <h3 i18n>Professional</h3>
-    <p i18n>The best builder of the century probably equals to the gods of this world. We built door, window, home, wall for {{ 20 | currency}}</p>
+    <h1 i18n>{{ presentationH1 | translate }}</h1>
+    <h3 i18n>{{ presentationH3 | translate }}</h3>
+    <p i18n>{{ presentationP | translate }}</p>
     <div class="cta">
-      <a i18n href="#">Need wall ?</a>
-      <a i18n href="#">Need door ?</a>
+      <a i18n href="#">{{ presentationCTA1 | translate }}</a>
+      <a i18n href="#">{{ presentationCTA2 | translate }}</a>
     </div>
   </section>
   <div class="social-icons">
@@ -23,16 +23,14 @@
 <!-- Features anf Objections -->
 <div class="showcase">
   <div class="hook-text">
-    <span i18n class="first-text">20 years of </span>
+    <span i18n class="first-text">{{ ShowcaseFirstText | translate }}</span>
     <div class="second-text">
-      <div i18n class="second-part"><span>renovation</span></div>
-      <div i18n class="second-part"><span>satisfied client</span></div>
-      <div i18n class="second-part"><span>hardwork</span></div>
-      <div i18n class="second-part"><span>business</span></div>
+      <div i18n class="second-part"><span>{{ ShowcaseSecondText1 | translate }}</span></div>
+      <div i18n class="second-part"><span>{{ ShowcaseSecondText2 | translate }}</span></div>
+      <div i18n class="second-part"><span>{{ ShowcaseSecondText3 | translate }}</span></div>
+      <div i18n class="second-part"><span>{{ ShowcaseSecondText4 | translate }}</span></div>
     </div>
   </div>
-
-
 </div>
 
 
@@ -56,7 +54,7 @@
     <a href="https://goo.gl/maps/GCvSDoof3u3r6uKXA" target="_blank">
     <div class="comment-content">
       <h1>Neo Murphy</h1>
-      <p i18n>J'ai fait appel à Armbati sur recommandation d'un collègue pour refaire tout le sol de mon appartement. Ils ont fait un travail impeccable et dans les délais ! Le gérant est très professionnel et soucieux de la qualité, service top.</p>
+      <p i18n>{{ Comment1 | translate }}</p>
     </div>
     </a>
   </div>
@@ -68,10 +66,7 @@
     <a href="https://goo.gl/maps/c2gH97L4XZhaUWfg6" target="_blank">
     <div class="comment-content">
       <h1>HARKIZ MICKAEL</h1>
-      <p i18n>Société de confiance et avec une expérience sans défaut.
-        Toujours de bons conseils et à l'écoute du client.
-        Je recommande vivement !
-        Merci à toute l'équipe pour votre travail !<br><br><br></p>
+      <p i18n>{{ Comment2 | translate }}<br><br><br></p>
     </div>
     </a>
   </div>
@@ -84,12 +79,7 @@
     <div class="comment-content">
 
       <h1>Salima K</h1>
-      <p i18n>Sérieux, efficaces et à l’écoute.
-        Entreprise de confiance
-        <br>
-        <br>++ pose du carrelage sdb impec
-        <br><br>
-        Tarifs très raisonnables<br><br></p>
+      <p i18n>{{ Comment3 | translate }}<br><br></p>
 
     </div>
     </a>
@@ -101,42 +91,42 @@
 
 
 <div class="faq">
-  <h1>FAQ</h1>
+  <h1>{{ FaqH1 | translate }}</h1>
 
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        <span i18n class="question">How do you make renovation ?</span>
+        <span i18n class="question">{{ FaqQuestion1 | translate }}</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p i18n class="answer">We take all of our knowledge, concentrate it inside our fist then smash the ground.</p>
+    <p i18n class="answer">{{ FaqAnswer1 | translate }}</p>
   </mat-expansion-panel>
 
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        <span i18n class="question">Can I have a refund ?</span>
+        <span i18n class="question">{{ FaqQuestion2 | translate }}</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p i18n class="answer">Sure, if our client aren't satisfied with our renovation we refund 120% of the total cost plus a pizza.</p>
+    <p i18n class="answer">{{ FaqAnswer2 | translate }}</p>
   </mat-expansion-panel>
 
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        <span i18n class="question">Why does my wife left me and took our kids ?</span>
+        <span i18n class="question">{{ FaqQuestion3 | translate }}</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p i18n class="answer">Probably because of the gigantic hole in the roof. Make sure to contact us if you want them back ! 😉</p>
+    <p i18n class="answer">{{ FaqAnswer3 | translate }}</p>
   </mat-expansion-panel>
 
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        <span i18n class="question">Is Sevak wasting his talents ?</span>
+        <span i18n class="question">{{ FaqQuestion4 | translate }}</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p i18n class="answer">Nope, he will probably reach Challenger this year.</p>
+    <p i18n class="answer">{{ FaqAnswer4 | translate }}</p>
   </mat-expansion-panel>
 
 </div>
@@ -145,7 +135,7 @@
 <!-- Founder note -->
 
 
-<h1 i18n>Nos dernières rénovations</h1>
+<h1 i18n class="last-work-title">{{ LastWork | translate }}</h1>
 <carousel [isAnimated]="true">
   <slide class="col-sm-6" *ngFor="let slide of slides">
     <img [src]="slide.imageSrc" [alt]="slide.alt">
